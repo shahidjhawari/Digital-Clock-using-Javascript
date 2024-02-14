@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAWAB ACADEMY</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 90px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+   <h1>Demo</h1>
+
+
+   <script>
+        function demo(){
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+
+            if(hours > 12){
+                hours = hours - 12;
+            }
+
+            var time = hours + " : " + minutes + " : " + seconds;
+            document.querySelector("h1").innerText = time;
+
+            setTimeout(demo, 1000);
+        }
+
+        window.addEventListener("load", function (){
+            demo();
+        })
+   </script>
+</body>
+</html>
